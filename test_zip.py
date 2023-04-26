@@ -1,11 +1,11 @@
 import os
 import zipfile
 
-from os_path_scripts import PROJECT_ROOT_PATH
+from os_path_scripts import RESOURCES_PATH
 
 
 def test_zip_files():
-    resources = os.path.join(PROJECT_ROOT_PATH, 'resources')
+    resources = os.path.join(RESOURCES_PATH)
     file_names = os.listdir(resources)
     archive_name = os.path.join(resources, 'test.zip')
 

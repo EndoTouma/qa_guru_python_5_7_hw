@@ -5,11 +5,12 @@ from selenium import webdriver
 from selene import browser
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
-from os_path_scripts import PROJECT_ROOT_PATH
+
+from os_path_scripts import RESOURCES_PATH
 
 
 def test_download_file_with_browser():
-    downloads_folder = os.path.join(PROJECT_ROOT_PATH, 'downloads')
+    downloads_folder = os.path.join(RESOURCES_PATH)
     os.makedirs(downloads_folder, exist_ok=True)
 
     options = webdriver.ChromeOptions()

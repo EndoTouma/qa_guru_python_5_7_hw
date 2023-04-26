@@ -1,11 +1,11 @@
 import os
 import xlrd
 
-from os_path_scripts import PROJECT_ROOT_PATH
+from os_path_scripts import RESOURCES_PATH
 
 
 def test_xls():
-    resources = os.path.join(PROJECT_ROOT_PATH, 'resources')
+    resources = os.path.join(RESOURCES_PATH)
     excel_path = os.path.join(resources, 'file_example_XLS_10.xls')
 
     book = xlrd.open_workbook(excel_path)

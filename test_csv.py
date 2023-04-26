@@ -1,11 +1,11 @@
 import csv
 import os
 
-from os_path_scripts import PROJECT_ROOT_PATH
+from os_path_scripts import RESOURCES_PATH
 
 
 def test_csv():
-    resources = os.path.join(PROJECT_ROOT_PATH, 'resources')
+    resources = os.path.join(RESOURCES_PATH)
     if not os.path.exists(resources):
         os.mkdir(resources)
 

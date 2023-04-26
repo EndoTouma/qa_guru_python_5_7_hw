@@ -1,11 +1,11 @@
 import os
 from pypdf import PdfReader
 
-from os_path_scripts import PROJECT_ROOT_PATH
+from os_path_scripts import RESOURCES_PATH
 
 
 def test_pdf():
-	resources = os.path.join(PROJECT_ROOT_PATH, 'resources')
+	resources = os.path.join(RESOURCES_PATH)
 	pdf_path = os.path.join(resources, 'docs-pytest-org-en-latest.pdf')
 	with open(pdf_path, 'rb') as file:
 		reader = PdfReader(file)

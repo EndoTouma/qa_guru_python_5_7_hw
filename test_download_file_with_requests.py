@@ -1,11 +1,11 @@
 import os
 import requests
 
-from os_path_scripts import PROJECT_ROOT_PATH
+from os_path_scripts import RESOURCES_PATH
 
 
 def test_downloaded_file_with_requests():
-	downloads_folder = os.path.join(PROJECT_ROOT_PATH, 'resources')
+	downloads_folder = os.path.join(RESOURCES_PATH)
 	os.makedirs(downloads_folder, exist_ok=True)
 
 	url = 'https://selenium.dev/images/selenium_logo_square_green.png'
