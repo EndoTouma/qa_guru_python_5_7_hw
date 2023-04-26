@@ -1,5 +1,6 @@
 import os
 from pypdf import PdfReader
+
 from os_path_scripts import PROJECT_ROOT_PATH
 
 
