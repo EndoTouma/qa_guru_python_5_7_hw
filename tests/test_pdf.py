@@ -5,8 +5,7 @@ from os_path_scripts import RESOURCES_PATH
 
 
 def test_pdf():
-	resources = os.path.join(RESOURCES_PATH)
-	pdf_path = os.path.join(resources, 'docs-pytest-org-en-latest.pdf')
+	pdf_path = os.path.join(RESOURCES_PATH, 'docs-pytest-org-en-latest.pdf')
 	with open(pdf_path, 'rb') as file:
 		reader = PdfReader(file)
 		number_of_pages = len(reader.pages)

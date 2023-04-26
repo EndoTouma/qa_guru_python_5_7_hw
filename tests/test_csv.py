@@ -5,11 +5,7 @@ from os_path_scripts import RESOURCES_PATH
 
 
 def test_csv():
-    resources = os.path.join(RESOURCES_PATH)
-    if not os.path.exists(resources):
-        os.mkdir(resources)
-
-    csv_path = os.path.join(resources, 'eggs.csv')
+    csv_path = os.path.join(RESOURCES_PATH, 'eggs.csv')
 
     with open(csv_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile, delimiter=',')

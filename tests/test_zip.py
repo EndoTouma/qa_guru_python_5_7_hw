@@ -5,13 +5,12 @@ from os_path_scripts import RESOURCES_PATH
 
 
 def test_zip_files():
-    resources = os.path.join(RESOURCES_PATH)
-    file_names = os.listdir(resources)
-    archive_name = os.path.join(resources, 'test.zip')
+    file_names = os.listdir(RESOURCES_PATH)
+    archive_name = os.path.join(RESOURCES_PATH, 'test.zip')
 
     with zipfile.ZipFile(archive_name, mode='w', compression=zipfile.ZIP_DEFLATED) as archive:
         for file_name in file_names:
-            file_path = os.path.join(resources, file_name)
+            file_path = os.path.join(RESOURCES_PATH, file_name)
             archive.write(file_path, file_name)
 
     with zipfile.ZipFile(archive_name, mode='r') as archive:

@@ -5,8 +5,7 @@ from os_path_scripts import RESOURCES_PATH
 
 
 def test_xls():
-    resources = os.path.join(RESOURCES_PATH)
-    excel_path = os.path.join(resources, 'file_example_XLS_10.xls')
+    excel_path = os.path.join(RESOURCES_PATH, 'file_example_XLS_10.xls')
 
     book = xlrd.open_workbook(excel_path)
     print(f'Количество листов {book.nsheets}')

@@ -10,12 +10,9 @@ from os_path_scripts import RESOURCES_PATH
 
 
 def test_download_file_with_browser():
-    downloads_folder = os.path.join(RESOURCES_PATH)
-    os.makedirs(downloads_folder, exist_ok=True)
-
     options = webdriver.ChromeOptions()
     options.add_experimental_option("prefs", {
-        "download.default_directory": downloads_folder,
+        "download.default_directory": RESOURCES_PATH,
         "download.prompt_for_download": False
     })
 
@@ -31,7 +28,7 @@ def test_download_file_with_browser():
 
     time.sleep(20)
 
-    downloaded_file = os.path.join(downloads_folder, 'pytest-main.zip')
+    downloaded_file = os.path.join(RESOURCES_PATH, 'pytest-main.zip')
     assert os.path.exists(downloaded_file), f"Файл не найден: {downloaded_file}"
 
     file_size = os.path.getsize(downloaded_file)
